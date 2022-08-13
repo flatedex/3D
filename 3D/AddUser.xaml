@@ -1,0 +1,40 @@
+﻿<Window x:Class="_3D.AddUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3D"
+        mc:Ignorable="d"
+        Title="AddUser" Height="204" Width="365">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid x:Name="userRole_TextBox">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FE00158A" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="User login" HorizontalAlignment="Left" Margin="11,22,0,0" VerticalAlignment="Top" Height="30" Width="162" FontSize="16"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="11,58,0,0" VerticalAlignment="Top" Height="30" Width="133" FontSize="16"/>
+        <Label Content="Role" HorizontalAlignment="Left" Margin="11,95,0,0" VerticalAlignment="Top" FontSize="16" Height="37" Width="56"/>
+        <TextBox x:Name="userLogin_TextBox" HorizontalAlignment="Left" Margin="206,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="21"/>
+        <TextBox x:Name="userPassword_TextBox" HorizontalAlignment="Left" Margin="206,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="23"/>
+        <TextBox x:Name="role_TextBox" HorizontalAlignment="Left" Margin="206,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="22" />
+        <Button x:Name="addUser_Button" Content="Add" HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" FontSize="16" Width="121" Click="addUser_Button_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FE010F5F" Offset="0.98"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

@@ -1,0 +1,91 @@
+﻿<Window x:Class="_3D.AddPrinters"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3D"
+        mc:Ignorable="d"
+        Title="AddPrinters" Height="476" Width="500">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="8" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="8" />
+        </Style>
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="0,0,0,-16">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FF01168A" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="221" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Title" Margin="8,8,8,8" FontSize="16"/>
+        <TextBlock Text="Width, mm" Grid.Row="1" Margin="8,8,8,8" FontSize="16" />
+        <TextBlock Text="Length, mm" Grid.Row="2" Margin="8,8,8,8" FontSize="16" />
+        <TextBlock Text="Height, mm" Grid.Row="3" Margin="8,8,8,8" FontSize="16" />
+        <TextBlock Text="Price, rub" Grid.Row="4" Margin="8,8,8,8" FontSize="16" />
+        <TextBlock Text="Productivity, mm/h" Grid.Row="5" Margin="8,8,8,8" FontSize="16" />
+        <TextBlock Text="Print area width, mm" Grid.Row="6" Margin="8,8,8,8" FontSize="16" />
+        <TextBlock Text="Print area length, mm" Grid.Row="7" Margin="8,8,8,8" FontSize="16" />
+        <TextBlock Text="Print area height, mm" Grid.Row="8" Margin="8,8,8,8" FontSize="16" />
+        <TextBlock Text="Extrudors quantity" Grid.Row="9" Margin="8,8,8,8" FontSize="16" />
+
+        <TextBox x:Name="TitleBox" Text="{Binding PrinterTitle}" Grid.Column="1" Margin="8,8,8,8"/>
+        <TextBox x:Name="WidthBox" Text="{Binding PrinterWidth}" Grid.Column="1" Grid.Row="1" Margin="8,8,8,8" />
+        <TextBox x:Name="LengthBox" Text="{Binding PrinterLength}" Grid.Column="1" Grid.Row="2" Margin="8,8,8,8" />
+        <TextBox x:Name="HeightBox" Text="{Binding PrinterHeight}" Grid.Column="1" Grid.Row="3" Margin="8,8,8,8" />
+        <TextBox x:Name="PriceBox" Text="{Binding PrinterPrice}" Grid.Column="1" Grid.Row="4" Margin="8,8,8,8" />
+        <TextBox x:Name="ProductivityBox" Text="{Binding PrinterProductivity}" Grid.Column="1" Grid.Row="5" Margin="8,8,8,8" />
+        <TextBox x:Name="PAWidthBox" Text="{Binding Pa_width}" Grid.Column="1" Grid.Row="6" Margin="8,8,8,8" />
+        <TextBox x:Name="PALengthBox" Text="{Binding Pa_length}" Grid.Column="1" Grid.Row="7" Margin="8,8,8,8" />
+        <TextBox x:Name="PAHeightBox" Text="{Binding Pa_height}" Grid.Column="1" Grid.Row="8" Margin="8,8,8,8" />
+        <TextBox x:Name="ExtrudersQuantityBox" Text="{Binding Extruders_quantity}" Grid.Column="1" Grid.Row="9" Margin="8,8,8,8" />
+
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="9" Width="224" Grid.ColumnSpan="2" Margin="138,43,0,0" Grid.RowSpan="2">
+            <Button IsDefault="True" Click="Accept_Click" MinWidth="60" Content="Confirm" Width="112" FontSize="16" Height="30">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FE010F5F" Offset="0.977"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button IsCancel="True" MinWidth="60" Click="Button_Click" Content="Cancel" Width="112" FontSize="16" Height="30">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FE010F5F" Offset="0.977"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

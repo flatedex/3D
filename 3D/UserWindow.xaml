@@ -1,0 +1,96 @@
+﻿<Window x:Class="_3D.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3D"
+        mc:Ignorable="d"
+        Title="UserWindow" Height="471" Width="990" Loaded="Window_Loaded">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FE00158A" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid x:Name="products_DataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="371,100,10,10"/>
+        <TextBox x:Name="search_TextBox" HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404" Height="26"/>
+        <Button x:Name="search_Button" Content="Search" HorizontalAlignment="Left" Margin="711,40,0,0" VerticalAlignment="Top" Height="26" Width="57" Click="search_Button_Click" FontSize="16">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FE010F5F" Offset="0.97"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <ComboBox HorizontalAlignment="Left" Margin="134,44,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Manufacturer" HorizontalAlignment="Left" Margin="5,38,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox x:Name="manufact_ComboBox" HorizontalAlignment="Left" Margin="134,44,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Category" HorizontalAlignment="Left" Margin="5,68,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox x:Name="category_ComboBox" HorizontalAlignment="Left" Margin="134,74,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Material" HorizontalAlignment="Left" Margin="5,99,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox x:Name="material_ComboBox" HorizontalAlignment="Left" Margin="134,105,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Width, mm" HorizontalAlignment="Left" Margin="27,127,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="widthFrom_TextBox" HorizontalAlignment="Left" Margin="36,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="widthTo_TextBox" HorizontalAlignment="Left" Margin="36,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <Label Content="From" HorizontalAlignment="Left" Margin="1,152,0,0" VerticalAlignment="Top"/>
+        <Label Content="To" HorizontalAlignment="Left" Margin="1,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,1.562"></Label>
+        <Label Content="Length, mm" HorizontalAlignment="Left" Margin="142,127,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="lengthFrom_TextBox" HorizontalAlignment="Left" Margin="154,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.486,0.336"/>
+        <TextBox x:Name="lengthTo_TextBox" HorizontalAlignment="Left" Margin="154,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <Label Content="From" HorizontalAlignment="Left" Margin="118,151,0,0" VerticalAlignment="Top"/>
+        <Label Content="To" HorizontalAlignment="Left" Margin="116,176,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,1.562"/>
+        <Label Content="Height, mm" HorizontalAlignment="Left" Margin="269,127,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="heightTo_TextBox" HorizontalAlignment="Left" Margin="284,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <Label Content="From" HorizontalAlignment="Left" Margin="247,151,0,0" VerticalAlignment="Top"/>
+        <Label Content="To" HorizontalAlignment="Left" Margin="248,176,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,1.562"/>
+        <TextBox x:Name="heightFrom_TextBox" HorizontalAlignment="Left" Margin="284,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.486,0.336"/>
+        <Label Content="Price, rub" HorizontalAlignment="Left" Margin="29,204,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="priceFrom_TextBox" HorizontalAlignment="Left" Margin="36,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="priceTo_TextBox" HorizontalAlignment="Left" Margin="36,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <Label Content="From" HorizontalAlignment="Left" Margin="0,230,0,0" VerticalAlignment="Top"/>
+        <Label Content="To" HorizontalAlignment="Left" Margin="0,255,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,1.562"/>
+        <Label Content="Productivity, mm/h" HorizontalAlignment="Left" Margin="121,204,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="prodFrom_TextBox" HorizontalAlignment="Left" Margin="156,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="prodTo_TextBox" HorizontalAlignment="Left" Margin="156,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <Label Content="From" HorizontalAlignment="Left" Margin="121,228,0,0" VerticalAlignment="Top"/>
+        <Label Content="To" HorizontalAlignment="Left" Margin="121,253,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,1.562"/>
+        <Label Content="Extrudors" HorizontalAlignment="Left" Margin="277,206,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <CheckBox x:Name="extr1_CheckBox" Content="1" HorizontalAlignment="Left" Margin="301,237,0,0" VerticalAlignment="Top" Checked="extr1_CheckBox_Checked"/>
+        <CheckBox x:Name="extr2_CheckBox" Content="2" HorizontalAlignment="Left" Margin="301,259,0,0" VerticalAlignment="Top" Checked="extr2_CheckBox_Checked"/>
+        <Label Content="Print area" HorizontalAlignment="Left" Margin="146,275,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Width, mm" HorizontalAlignment="Left" Margin="22,296,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="paWidthFrom_TextBox" HorizontalAlignment="Left" Margin="36,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBox x:Name="paWidthTo_TextBox" HorizontalAlignment="Left" Margin="36,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <Label Content="From" HorizontalAlignment="Left" Margin="0,321,0,0" VerticalAlignment="Top"/>
+        <Label Content="To" HorizontalAlignment="Left" Margin="0,346,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,1.562"/>
+        <Label Content="Length, mm" HorizontalAlignment="Left" Margin="146,296,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="paLengthFrom_TextBox" HorizontalAlignment="Left" Margin="158,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.486,0.336"/>
+        <TextBox x:Name="paLengthTo_TextBox" HorizontalAlignment="Left" Margin="158,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <Label Content="From" HorizontalAlignment="Left" Margin="122,320,0,0" VerticalAlignment="Top"/>
+        <Label Content="To" HorizontalAlignment="Left" Margin="120,345,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,1.562"/>
+        <Label Content="Height, mm" HorizontalAlignment="Left" Margin="273,296,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="paHeightTo_TextBox" HorizontalAlignment="Left" Margin="288,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <Label x:Name="heightFrom_TextBox_Copy" Content="From" HorizontalAlignment="Left" Margin="251,320,0,0" VerticalAlignment="Top"/>
+        <Label Content="To" HorizontalAlignment="Left" Margin="251,345,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.502,1.562"/>
+        <TextBox x:Name="paHeightFrom_TextBox" HorizontalAlignment="Left" Margin="289,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.486,0.336"/>
+        <Button x:Name="confirmBtn" Content="Confirm" HorizontalAlignment="Left" Margin="129,389,0,0" VerticalAlignment="Top" Height="35" Width="120" Click="confirmBtn_Click" FontSize="16">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FE010F5F" Offset="0.97"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
